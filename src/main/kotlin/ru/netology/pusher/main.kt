@@ -15,13 +15,27 @@ fun main() {
 
     FirebaseApp.initializeApp(options)
 
+//    val message = Message.builder()
+//        .putData("action", "LIKE")
+//        .putData("content", """{
+//          "userId": 1,
+//          "userName": "Vasiliy",
+//          "postId": 2,
+//          "postAuthor": "Netology"
+//        }""".trimIndent())
+//        .setToken(token)
+//        .build()
+
     val message = Message.builder()
-        .putData("action", "LIKE")
+        .putData("action", "POST")
         .putData("content", """{
-          "userId": 1,
-          "userName": "Vasiliy",
-          "postId": 2,
-          "postAuthor": "Netology"
+          "postAuthor": "Rick Astley",
+          "text": "Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you"
         }""".trimIndent())
         .setToken(token)
         .build()
